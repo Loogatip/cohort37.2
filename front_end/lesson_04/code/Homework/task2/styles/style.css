@@ -1,8 +1,10 @@
 .button {
+    /* padding: 10px 20px; */
+    width: 30%;
     height: 70px;
     background-color:black;
     color:aliceblue;
-    margin: 100px 0;
+    margin: auto;
     text-align: center;
 }
 .button1 {
@@ -10,6 +12,6 @@
     width: 85%;
     background-color: blue;
     color: aliceblue;
-    border: radius 100px;
-    border-radius: 10%;
+    border-radius: 10px;
+    /* border-bottom-right-radius: 10px; */
 }
