@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    margin: 0 auto;
+    gap: 40px;
+    flex-direction: row;
+    align-items: center;
+    /* align-content: center; */
+    justify-content:space-evenly;
+
+}
+.item {
+    /* height: 50px; */
+    font-size: 13px;
+    color: beige;
+    /* background-color:black; */
+    border: 1px;
+
+}
+.header1 {
+    background-color:chartreuse;
+    justify-content: center;
+    display: flex;
+}
+.logo {
+    height: 100%;
+    /* margin: 30px; */
+}
+.logo-wrapper {
+    height: 50%;
+    background-color: aqua;
+    margin: 0 auto;
+    min-width: 50px;
+}
