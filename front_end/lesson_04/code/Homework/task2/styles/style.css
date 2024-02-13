@@ -1,0 +1,17 @@
+.button {
+    /* padding: 10px 20px; */
+    width: 30%;
+    height: 70px;
+    background-color:black;
+    color:aliceblue;
+    margin: auto;
+    text-align: center;
+}
+.button1 {
+    height: 85%;
+    width: 85%;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 10px;
+    /* border-bottom-right-radius: 10px; */
+}
