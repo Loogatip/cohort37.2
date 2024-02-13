@@ -11,19 +11,16 @@ for(let i = 0; i < 10; i++){
 console.log(rand);
 
 let max = rand[0];
+let min = rand[0];
 for( let i=1; i< rand.length; i ++){
     if(rand[i]>max){
         max = rand[i];
     }
-}
-console.log(max);
-
-let min = rand[0];
-for(let i=1; i<rand.length; i++){
     if(rand[i]<min){
         min= rand[i];
     }
 }
+console.log(max);
 console.log(min);
 console.log(max+min);
 
