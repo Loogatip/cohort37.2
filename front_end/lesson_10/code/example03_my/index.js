@@ -17,11 +17,11 @@ const hello = (str, f) => {
 
 //console.log(hello ("Juri", (str) => "Привет " + str));
 
-const str = hello ("Juri", (str) => "Привет" + str);
+const str2 = hello ("Juri", (str) => "Привет" + str);
 // const str2 = hello("Juri", (str) => {
 //      return "Привет ${str}"
 // });
 
 //const str = "Juri";
- const callBack = str => "Привет" + str;
- console.log(callBack());
+ const callBack = str => "Привет " + str;
+ console.log(callBack("Juri"));
