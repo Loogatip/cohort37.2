@@ -15,7 +15,7 @@ function simpleOrNot(number){
     if(number <= 1){
         return false;
     }
-    for (let i=2; i<= number-1; i++) {
+    for (let i=2; i<number; i++) {
         if (number % i === 0){
             return false;
         }
@@ -31,5 +31,5 @@ function find(n){
     }
     return simpleNumbers;
 }
-console.log(simpleOrNot(3));
+console.log(simpleOrNot(0));
 console.log(find(17));
