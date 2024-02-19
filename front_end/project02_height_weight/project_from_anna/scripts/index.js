@@ -34,7 +34,7 @@ const showAlertNaN = () => {
 
 const submitButtonHandler = (event) => {
     event.preventDefault();
-    if ((userInputHeight===undefined && userInputWeight===undefined) || (userInputHeight===undefined || userInputWeight===undefined)){
+    if ( !userInputHeight || !userInputWeight){
         showAlertEmpty();
         result;
     }else{
@@ -56,12 +56,13 @@ createButtonElement.addEventListener("click", submitButtonHandler);
 
 const resetButtonHandler = () => {
     bmi = "";
-    bmiElement.textContent = bmi;
     result = "";
+    userInputHeight = null;
+    userInputWeight = null;
+
+    bmiElement.textContent = bmi;
     resultElement.textContent = result;
-    userInputHeight = undefined;
     userInputHeight.textContent = userInputHeight;
-    userInputWeight = undefined;
     userInputWeight.textContent = userInputWeight;
 }
 resetButtonElement.addEventListener("click", resetButtonHandler);
