@@ -22,7 +22,7 @@ const calculator = (currencyFrom, currencyTo, amount) => {
     const rate = amount/currency1*currency2;
     return rate.toFixed(2);
 };
-
+ 
 const submitButtonHandler = (evt) => {
     evt.preventDefault();
     let resultValue = calculator(currencyFrom.value, currencyTo.value, amount.value);
