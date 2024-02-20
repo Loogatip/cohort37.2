@@ -29,8 +29,11 @@ const taskArr =[
 ]
 
 const taskObj = {};
+const newTaskObj = () =>{
 taskArr.forEach ( ([key, value]) => { taskObj[key] = value } );
-console.log(taskObj);
+return taskObj;
+}
+console.log(newTaskObj(taskObj));
 
 // -- №3 --
 const taskString = Object.values(taskObj).join(', ');

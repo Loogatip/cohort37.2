@@ -15,7 +15,10 @@ const taskObj = {
 }
 
 const newTaskObj = {};
+const newTaskObjByType = () =>{
 for(i in taskObj){
     newTaskObj[i] = typeof taskObj[i];
 }
-console.log(newTaskObj);
+return newTaskObj;
+}
+console.log(newTaskObjByType(newTaskObj));
