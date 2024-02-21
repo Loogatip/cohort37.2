@@ -11,10 +11,10 @@
 const taskArr = ['a', 36.6, 'John Doe'];
 const taskObj = {};
 
-const newTaskObj = () => {
-    for(let i=0; i<taskArr.length; i++){
-        taskObj[taskArr[i]] = taskArr[i]; 
+const newTaskObj = (array) => {
+    for(let i=0; i<array.length; i++){
+        taskObj[array[i]] = array[i]; 
     }
     return taskObj;
 }
-    console.log(newTaskObj(taskObj));
+    console.log(newTaskObj(taskArr));
