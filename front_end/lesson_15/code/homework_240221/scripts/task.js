@@ -36,7 +36,7 @@ let players = [
 //     })
 // console.log(playersWithGoals);
 
-    // - еще мой вариант -
+    // - еще мой вариант - сократил с консультации
     let playersWithGoals = players.map
     (player => (
         {...player, goals: Math.floor(Math.random() * 21)}
