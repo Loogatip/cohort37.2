@@ -17,4 +17,4 @@ const newTaskObj = (array) => {
     }
     return taskObj;
 }
-    console.log(newTaskObj(taskArr));
+console.log(newTaskObj(taskArr));

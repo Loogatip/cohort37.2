@@ -27,7 +27,7 @@ let players = [
     ];
 
     //  --- №1 ---
-
+    
     // - этот вариант подсмотрел у Катерины на консультации (меняет исходный массив) -
 //     const playersWithGoals = players.map(player => {
 //         const copyPlayer = {...player};                             // -> не меняет исходник
@@ -35,6 +35,13 @@ let players = [
 //         return copyPlayer;
 //     })
 // console.log(playersWithGoals);
+
+    // - еще мой вариант -
+    let playersWithGoals = players.map
+    (player => (
+        {...player, goals: Math.floor(Math.random() * 21)}
+    )); 
+console.log(playersWithGoals);
 
 function addGoals(players){
 
