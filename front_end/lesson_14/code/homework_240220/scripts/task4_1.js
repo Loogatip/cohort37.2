@@ -16,9 +16,15 @@ const taskObj = {
     '36.6': 36.6, 
     'John Doe': 'John Doe'
 }
+function resultObject (obj){
 const newTaskObj = {};
-for(i in taskObj){
-    
+for(let key in obj){
+    const value = obj[key];
+    const type = typeof value;
+    newTaskObj[key] = {value,type};
+    }
+    return newTaskObj;
 }
-console.log(newTaskObj);
+console.log(resultObject(taskObj));
+
 
