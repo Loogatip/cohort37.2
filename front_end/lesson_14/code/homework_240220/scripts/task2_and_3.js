@@ -37,5 +37,5 @@ return taskObj;
 console.log(newTaskObj(taskArr));
 
 // -- №3 --
-const taskString = Object.values(taskObj).join(', ');
-console.log(taskString);
+const taskString = (obj) => Object.values(obj).join(', ');
+console.log(taskString(taskObj));

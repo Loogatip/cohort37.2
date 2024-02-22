@@ -37,21 +37,21 @@ let players = [
 // console.log(playersWithGoals);
 
     // - еще мой вариант - сократил с консультации
-    let playersWithGoals = players.map
-    (player => (
-        {...player, goals: Math.floor(Math.random() * 21)}
-    )); 
-console.log(playersWithGoals);
+//     let playersWithGoals = players.map
+//     (player => (
+//         {...player, goals: Math.floor(Math.random() * 21)}
+//     )); 
+// console.log(playersWithGoals);
 
-function addGoals(players){
+function addGoals(array){
 
     const newPlayersArr = [];
 
-    for (let i = 0; i < players.length; i++){
+    for (let i = 0; i < array.length; i++){
 
-        const player = players[i];
+        const player = array[i];
 
-        const playerInNewArray = {...player, goals: Math.floor(Math.random()*20)};
+        const playerInNewArray = {...player, goals: Math.floor(Math.random()*21)};
         newPlayersArr.push(playerInNewArray);
     }
     return newPlayersArr;
@@ -63,12 +63,12 @@ console.log(addGoals(players));
     const filteredPlayers = players.filter(
         (player) => { return player.height >= 180 && player.weight < 80}
         );
-console.log(filteredPlayers);
+//console.log(filteredPlayers);
 
     //  --- №3 ----
 
     const playersForSort = addGoals(players);
     playersForSort.sort((key, value) => value.goals - key.goals);
-console.log(playersForSort);
+//console.log(playersForSort);
 
-console.log(players);
+//console.log(players);
