@@ -24,55 +24,22 @@ const showAllButton = document.querySelector('#all');
 const showDoneButton = document.querySelector('#completed');
 const showUndoneButton = document.querySelector('#not_completed');
 
-// const updateList = (array) => {                                    
-//     listAllElements.innerHTML = '';                                 
-    
-//     array.sort((a, b) => a.done - b.done);                          
-    
-//     array.forEach(element => {                                      
-//         const newListItem = document.createElement('li');           
-//         newListItem.classList.add('list-item');                     
-//         if(element.done){                                           
-//             newListItem.classList.add('list-item_done');            
-//         }
-//         newListItem.textContent = element.task;                     
-//         newListItem.addEventListener('click', listItemClickHandler);
-//         listAllElements.append(newListItem);                        
-//     });
-// }
-// const updateList = (array) => {                                    
-//     listAllElements.innerHTML = '';                                 
-    
-//     array.sort((a, b) => a.done - b.done);                          
-    
-//     array.map(element => {                                           
-//         const newListItem = document.createElement('li');           
-//         newListItem.classList.add('list-item');                     
-//         if(element.done){                                           
-//             newListItem.classList.add('list-item_done');            
-//         }
-//         newListItem.textContent = element.task;                     
-//         newListItem.addEventListener('click', listItemClickHandler);
-//         listAllElements.append(newListItem);                        
-//     });
-// }
-const updateList = (array) => {
-    listAllElements.innerHTML = '';
-    
-    array.sort((a, b) => a.done - b.done);
 
-    const listItems = array.map(element => {
-        const newListItem = document.createElement('li');
-        newListItem.classList.add('list-item');
-        if (element.done) {
-            newListItem.classList.add('list-item_done');
+const updateList = (array) => {                                    
+    listAllElements.innerHTML = '';                                 
+    
+    array.sort((a, b) => a.done - b.done);                          
+    
+    array.map(element => {                                           
+        const newListItem = document.createElement('li');           
+        newListItem.classList.add('list-item');                     
+        if(element.done){                                           
+            newListItem.classList.add('list-item_done');            
         }
-        newListItem.textContent = element.task;
+        newListItem.textContent = element.task;                     
         newListItem.addEventListener('click', listItemClickHandler);
-        return newListItem;
+        listAllElements.append(newListItem);                        
     });
-
-    listAllElements.append(...listItems);
 }
 
 const createButtonHandler = () => {
