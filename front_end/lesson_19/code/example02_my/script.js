@@ -16,8 +16,6 @@ const arrToList = (array) => {
     carPartsElements.append(...temp);
 };
 
-
 // <li>wheel</li>, <li>engine</li>
-
 
 arrToList(parts);
