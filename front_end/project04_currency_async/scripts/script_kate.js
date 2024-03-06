@@ -25,9 +25,15 @@ function currencySelectors(rates) {
 
 const submitButtonHandler = async (evt) => {
     evt.preventDefault(); 
+    
     const amountValue = amount.value;
     const fromCurrency = currencyFrom.value;
     const toCurrency = currencyTo.value;
+    
+    if( isNaN (amountValue) || amountValue < 0 ) {
+        alert(' пожалуйста, введите число ');
+        return;
+    }
 
     if (rates[fromCurrency] && rates[toCurrency]) {
         const rate = rates[toCurrency] / rates[fromCurrency]; 

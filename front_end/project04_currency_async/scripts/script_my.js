@@ -1,4 +1,3 @@
-
 const currencyFrom = document.querySelector('#choice_1');
 const currencyTo = document.querySelector('#choice_2');
 const amount = document.querySelector('#input-amount');
@@ -6,8 +5,8 @@ const button = document.querySelector('#submit');
 const result = document.querySelector('#result');
 
 const currencyData = async () => {
-    const serverReponse = await fetch('https://openexchangerates.org/api/latest.json?app_id=c56da6a380da489ea5745895577c2ac4');
-    const body = await serverReponse.json(); 
+    const serverResponse = await fetch('https://openexchangerates.org/api/latest.json?app_id=c56da6a380da489ea5745895577c2ac4');
+    const body = await serverResponse.json(); 
     showCurrency(body.rates);
     return body.rates;
 }
