@@ -5,6 +5,7 @@ const amount = document.querySelector('#input-amount');
 const button = document.querySelector('#submit');
 const result = document.querySelector('#result');
 const reset = document.querySelector('#reset');
+const soundElement = document.querySelector('#sound');
 
 const currencyData = async () => {
     const serverResponse = await fetch('https://openexchangerates.org/api/latest.json?app_id=c56da6a380da489ea5745895577c2ac4');
@@ -47,3 +48,4 @@ const submitButtonHandler = async (evt) => {
 };
 document.querySelector('#converter-form').addEventListener('submit', submitButtonHandler);
 document.querySelector('#reset').addEventListener('click', resetResult = () => result.textContent = 'Результат');
+button.addEventListener('click', () => soundElement.play());
