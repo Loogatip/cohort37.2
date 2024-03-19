@@ -38,7 +38,7 @@ use('car_park');
 // №3 Выведите максимальную мощность по брендам.
 // db.cars.aggregate([
 //     {
-//         $group: {_id:"$brand", averagePower:{$max:"$horsepower"}},
+//         $group: {_id:"$brand", maxPower:{$max:"$horsepower"}},
 //     }
 // ]);
 
@@ -52,7 +52,27 @@ use('car_park');
 //     }
 // ]);
 
-// №5 Выведите 3 самых дорогие машины определенного бренда.
+// №5а Вывести название бренда с большим кол-ом машин
+// db.cars.aggregate([
+//     {
+//         $group: { 
+//             _id: "$brand",
+//             carsCount: {
+//                 $count:{},
+//             }, 
+//         }
+//     },
+//     {
+//         $sort: {
+//             carsCount: -1,
+//         },
+//     },
+//     {
+//         $limit: 1
+//     }
+// ]);
+
+// №5b Выведите 3 самых дорогие машины определенного бренда.
 // db.cars.aggregate([
 //     { 
 //         $match: { brand: "Audi" } 
@@ -153,3 +173,25 @@ use('car_park');
 //       }
 //     }
 //   ]);
+
+db.cars.aggregate([
+    {
+      $lookup: {
+        from: "owners",
+        localField: "_id",
+        foreignField: "cars",
+        as: "owners"
+      }
+    },
+    {
+      $group: {
+        _id: "$owners.owner",
+        averagePrice: { $avg: "$price" }
+      }
+    },
+    {
+      $match: {
+        averagePrice: { $gt: 20000 }
+      }
+    }
+  ]);
